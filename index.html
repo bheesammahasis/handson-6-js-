@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>PROBLEM SOLVING</h1>  
+    <div class="d1">learning</div> 
+    <div class="d2">prepbytes</div>
+    <pre class="ques">
+    QUESTION NO1:-Find the Smaller Angle.
+    Example
+    Sample Input 1
+    5 30
+
+     Sample Output 1
+     15
+
+     Sample Input 2
+     6 0
+
+     Sample Output 2
+     180
+    </pre>
+    <pre class="ans">
+    ANSWER NO1:-
+    var Minimal_Angle = (h, m) => 
+     {
+     h=h%12;
+     let hour=(h*360)/12 + (m*360)/(12*60);
+     let minute = (m*360)/60;
+     let angle = Math.abs(hour-minute);
+     if(angle>180){
+     return (360-angle);
+     }
+     else{
+       return angle;
+     }
+     };
+    </pre>
+    <hr>
+    <div class="d1">learning</div> 
+    <div class="d2">prepbytes</div>
+    <pre class="ques">
+    QUESTION NO2:-Check whether the year is Leap year or not.
+    Example
+    Sample Input 1
+    1900
+    
+    Sample Output 1
+    Non Leap Year
+    
+    Sample Input 2
+    2012
+    
+    Sample Output 2
+    Leap Year     
+    </pre>
+    <pre class="ans">
+    ANSWER NO2:-
+    var Check_Leap = (year) => 
+    {
+     if(year % 400 ===0){
+       return "Leap Year";
+     }
+     if(year % 100 ===0){
+       return "Non Leap Year";
+     }
+     if(year % 4 ===0){
+       return "Leap Year";
+     }
+     return "Non Leap Year"
+     };
+     
+    </pre>
+    <hr>
+    <div class="d1">learning</div> 
+    <div class="d2">prepbytes</div>
+    <pre class="ques">
+    QUESTION NO3:-Perfect Number Check.
+    Example
+    Sample Input 1
+    1
+    
+    Sample Output 1
+    YES
+    
+    Sample Input 2
+    96345
+    
+    Sample Output 2
+    NO
+    </pre>
+    <pre class="ans">
+    ANSWER NO3:-
+    var Perfect_Check = (N) => 
+    {
+          //finding divisor & adding them
+          let add =0;
+          let x=1;
+          //looping all divisor of the number
+          while(N>=x){
+            if(N%x===0){
+              add=add+x;
+            }
+            x++;
+          }
+          //check if the addition of divisors is equal to 
+          //the input number
+          if(add===N)
+            {
+              return "YES";
+            }
+            else{
+              return "NO";
+            }
+      };
+     </pre>
+    <hr>
+    <div class="d1">learning</div> 
+    <div class="d2">prepbytes</div>
+    <pre class="ques">
+    QUESTION NO4:-Reverse a Number.
+    Example
+    Sample Input 1
+    1900
+    
+    Sample Output 1
+    91
+    
+    Sample Input 2
+    2012
+    
+    Sample Output 2
+    2102
+    </pre>
+    <pre class="ans">
+    ANSWER NO4:-
+    var Reverse_Number = (N) => 
+    {
+      //initialize to store the number
+      let revnum=0;
+      //loop through the digits of the number and reverse them
+      while(N>0){
+        let r=N%10;
+        revnum = revnum*10+r;
+        N=Math.floor(N/10);
+      }  
+      return revnum;
+    
+    };
+     
+    </pre>
+    <hr>
+    <div class="d1">learning</div> 
+    <div class="d2">prepbytes</div>
+    <pre class="ques">
+    QUESTION NO5:-Substring Check.
+    You are given two strings S1 and S2, you need to check whether the string S1 
+     is a substring of string S2 or not.
+     Example
+     Sample Input 1
+     Hii this is Prepbuddy
+     Prepbuddy
+     
+     Sample Output 1
+     YES
+     
+     Sample Input 2
+     Hii this is Prepbuddy
+     Prepbytes
+     
+     Sample Output 2
+     NO
+    </pre>
+    <pre class="ans">
+    ANSWER NO5:-
+    var Substring_Check = (S1, S2) => 
+    {
+       if(S1.includes(S2)){
+         return "YES";
+       }  
+       else{
+         return "NO";
+       }
+    };
+    </pre>
+    
+</body>
+</html>
